@@ -1,0 +1,44 @@
+.chat-container {
+  height: 1000px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  flex: 1;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.chat-box {
+  max-height: 800px;
+  overflow-y: auto;
+
+
+}
+
+.chat-box .list-group {
+  max-height: 100%;
+  overflow: hidden;
+}
+
+.bot-message,
+.user-message {
+  max-width: 70%;
+  word-wrap: break-word;
+  margin: 10px 0;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+.user-message {
+  background-color: #666;
+  color: #fff;
+}
+
+.bot-message {
+  background-color: #f4f4f4;
+}
+
+
+.input-form {
+  margin-top: 20px;
+}
