@@ -13,20 +13,26 @@
 
 .chat-box .list-group {
   max-height: 100%;
+  width: 100%;
 }
 
 .bot-message,
 .user-message {
-  max-width: 70%;
   word-wrap: break-word;
   margin: 10px 0;
   padding: 10px;
-  border-radius: 8px;
+}
+
+.message-text {
+  max-width: 50%;
+  margin-left: 25%;
+  text-align:left;
 }
 
 .user-message {
-  background-color: #666;
-  color: #fff;
+  background-color: #E0DFE2;
+  color: #1E1D20;
+
 }
 
 .bot-message {

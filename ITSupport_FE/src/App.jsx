@@ -8,7 +8,7 @@ function App() {
   return (
     <>
       <ITSNav />
-      <ChatInterface />t
+      <ChatInterface />
     </>
   );
 }

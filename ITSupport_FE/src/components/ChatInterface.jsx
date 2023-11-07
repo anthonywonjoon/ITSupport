@@ -36,14 +36,16 @@ const ChatInterface = () => {
       <div className="chat-container">
         <div className="chat-box" ref={chatBoxRef}>
           <ListGroup variant="flush">
-            {messages.map((message, index) => (
-                <ListGroup.Item
-                    key={index}
-                    className={message.user === 'bot' ? 'bot-message' : 'user-message'}
-                >
-                  {message.text}
-                </ListGroup.Item>
-            ))}
+              {messages.map((message, index) => (
+                  <ListGroup.Item
+                      key={index}
+                      className={message.user === 'bot' ? 'bot-message' : 'user-message'}
+                  >
+                    <div className="message-text">
+                      {message.text}
+                    </div>
+                  </ListGroup.Item>
+              ))}
           </ListGroup>
         </div>
       </div>
