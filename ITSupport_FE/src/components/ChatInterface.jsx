@@ -32,27 +32,29 @@ const ChatInterface = () => {
   };
 
   return (
-    <Container className="chat-container">
-      <div className="chat-box" ref={chatBoxRef}>
-        <ListGroup variant="flush">
-          {messages.map((message, index) => (
-            <ListGroup.Item
-              key={index}
-              className={message.user === 'bot' ? 'bot-message' : 'user-message'}
-            >
-              {message.text}
-            </ListGroup.Item>
-          ))}
-        </ListGroup>
+    <Container>
+      <div className="chat-container">
+        <div className="chat-box" ref={chatBoxRef}>
+          <ListGroup variant="flush">
+            {messages.map((message, index) => (
+                <ListGroup.Item
+                    key={index}
+                    className={message.user === 'bot' ? 'bot-message' : 'user-message'}
+                >
+                  {message.text}
+                </ListGroup.Item>
+            ))}
+          </ListGroup>
+        </div>
       </div>
       <Form className="input-form">
         <div className="input-container">
           <Form.Control
-            type="text"
-            placeholder="Type your message..."
-            value={inputText}
-            onChange={handleInputChange}
-            onKeyPress={handleKeyPress}
+              type="text"
+              placeholder="Type your message..."
+              value={inputText}
+              onChange={handleInputChange}
+              onKeyPress={handleKeyPress}
           />
           <Button variant="primary" onClick={handleSendMessage}>
             Send
