@@ -11,12 +11,17 @@ const ChatInterface = () => {
     setInputText(e.target.value);
   }
 
-  const handleSendMessage =() => {
+  const handleSendMessage = () => {
     if (inputText.trim() !== '') {
       setMessages([...messages, { text: inputText, user: 'user' }]);
       setInputText('');
     }
   };
+
+  const simulateBotResponse = () => {
+    const botResponse = 'This is a bot response';
+    setMessages([...messages, { text: botResponse, user: 'bot' }]);
+  }
 
   useEffect(() => {
     if (chatBoxRef.current) {
